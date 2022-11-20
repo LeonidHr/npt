@@ -1467,19 +1467,19 @@ body {
   width: 2.25rem;
   height: 2.25rem;
   border-radius: 50%;
-  color: rgba(0, 178, 146, 0.29);
   font-size: 1rem;
   -webkit-transition: all 0.3s ease 0s;
   -o-transition: all 0.3s ease 0s;
   transition: all 0.3s ease 0s;
 }
 
+.plans__slider .swiper-pagination-bullet span {
+  position: relative;
+  z-index: 2;
+}
+
 .no-webp .plans__slider .swiper-pagination-bullet-active{
   background: url("../img/plans/bg.png") center/cover no-repeat; }
-
-.plans__slider .swiper-pagination-bullet-active {
-  color: rgb(0, 178, 146);
-}
 
 .plans__wrapper {
   margin-bottom: 2.0625rem;

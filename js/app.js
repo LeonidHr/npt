@@ -27991,7 +27991,7 @@
                     el: ".plans__slider .swiper-pagination",
                     clickable: true,
                     renderBullet: function(index, className) {
-                        return '<span class="' + className + '">' + (index + 1) + "</span>";
+                        return '<button class="' + className + '"><span>' + (index + 1) + "</span></button>";
                     }
                 },
                 breakpoints: {
