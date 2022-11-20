@@ -4,7 +4,7 @@ The result of layout of the bot site that trades on the crypto exchange
 ## \#Demo
 [https://leonidhr.github.io/npt/](https://leonidhr.github.io/npt/)
 
-<img src="./src/img/preview.gif" width="726">
+<img src="img/preview.gif" width="726">
 
 ## \#Features
 * Parallax effect on mouse movement
