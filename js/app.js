@@ -24324,6 +24324,33 @@
                 if (window.FLS) console.log(message);
             }), 0);
         }
+        changeMenuItems();
+        function changeMenuItems() {
+            const menuItems = document.querySelectorAll(".menu__link"), isMain = document.querySelector("body").dataset.main;
+            if (isMain) menuItems.forEach((item => {
+                if (item.dataset.go) addDataForMenuItem(item);
+            })); else menuItems.forEach((item => {
+                if (item.dataset.go) addAnchorForMenuItem(item);
+            }));
+        }
+        function addDataForMenuItem(item) {
+            item.setAttribute("href", "#");
+            item.dataset.gotoSpeed = 400;
+            item.dataset.goto = `.${item.dataset.go}`;
+        }
+        function addAnchorForMenuItem(item) {
+            item.setAttribute("href", `${item.dataset.url}#${item.dataset.go}`);
+            item.dataset.gotoSpeed = "";
+            item.dataset.goto = "";
+        }
+        addDirectForInvCategories();
+        function addDirectForInvCategories() {
+            const categoryItems = document.querySelectorAll(".category-inv");
+            categoryItems.forEach(((item, i) => {
+                const prlxImage = item.querySelector(".category-inv__img img");
+                i % 2 === 0 ? prlxImage.dataset.prlxDxr = true : prlxImage.dataset.prlxDyr = true;
+            }));
+        }
         var smooth_scroll_polyfills_min = __webpack_require__(3002);
         let gotoblock_gotoBlock = (targetBlock, noHeader = false, speed = 500, offsetTop = 0) => {
             const targetBlockElement = document.querySelector(targetBlock);
@@ -27981,32 +28008,16 @@
                 },
                 on: {}
             });
-            if (document.querySelector(".plans__slider")) new core(".plans__slider", {
+            if (window.innerWidth <= 767.98) if (document.querySelector(".plans__slider")) new core(".plans__slider", {
                 modules: [ Pagination, Navigation, EffectFade ],
-                observer: true,
-                observeParents: true,
-                spaceBetween: 35,
-                speed: 400,
+                effect: "fade",
                 pagination: {
                     el: ".plans__slider .swiper-pagination",
                     clickable: true,
                     renderBullet: function(index, className) {
                         return '<button class="' + className + '"><span>' + (index + 1) + "</span></button>";
                     }
-                },
-                breakpoints: {
-                    320: {
-                        effect: "fade",
-                        direction: "horizontal",
-                        slidesPerView: 1
-                    },
-                    768: {
-                        direction: "vertical",
-                        effect: null,
-                        slidesPerView: 4
-                    }
-                },
-                on: {}
+                }
             });
             if (document.querySelector(".descr-roadmap__slider")) {
                 new core(".descr-roadmap__slider", {

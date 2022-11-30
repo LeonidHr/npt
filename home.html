@@ -6,13 +6,14 @@
 	<meta charset="UTF-8">
 	<meta name="format-detection" content="telephone=no">
 	<!-- <style>body{opacity: 0;}</style> -->
-	<link rel="stylesheet" href="css/style.min.css?_v=20221122224603">
+	<link rel="stylesheet" href="css/style.min.css?_v=20221130172010">
 	<link rel="shortcut icon" href="favicon.ico">
 	<!-- <meta name="robots" content="noindex, nofollow"> -->
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 </head>
 
-<body>
+<body data-main="true">
+
 	<div class="wrapper">
 		<header class="header">
 			<div class="header__container">
@@ -23,10 +24,10 @@
 					<nav class="menu__body">
 						<ul class="menu__list">
 							<li class="menu__item btn-wrap">
-								<a href="#" data-goto-speed="400" data-goto=".who" class="menu__link btn">О нас</a>
+								<a href="#" data-url="http://192.168.1.2:8080/home.html" data-go="who" class="menu__link btn">О нас</a>
 							</li>
 							<li class="menu__item btn-wrap">
-								<a href="#" data-goto-speed="400" data-goto=".entry" class="menu__link btn">как вступить?</a>
+								<a href="#" data-url="http://192.168.1.2:8080/home.html" data-go="entry" class="menu__link btn">как вступить?</a>
 							</li>
 							<li class="menu__item btn-wrap">
 								<a href="contacts.html" class="menu__link btn">Контакты</a>
@@ -43,31 +44,32 @@
 			</div>
 		</header>
 		<main class="page">
-			<section data-fullscreen data-prlx-parent class="mainscreen mainscreen-home">
-				<div class="mainscreen-home__container">
-					<div class="mainscreen-home__content">
-						<h1 data-prlx class="title-main title-main_s75 mainscreen-home__title">ТЕХНОЛОГИИ</h1>
-						<h2 class="mainscreen-home__subtitle">Нейронного прогнозирования</h2>
-						<p class="mainscreen-home__text">
-							<span></span>
-							автоматический робот для торговли на криптовалютном рынке
-						</p>
-						<div class="buttons-mainscreen mainscreen-home__btns">
-							<div class="btn-wrap">
-								<button class="btn subscribe-btn mainscreen-home__btn buttons-mainscreen__btn" type="button">
-									Присоедениться
-								</button>
+			<section data-prlx-parent class="mainscreen mainscreen-home">
+				<div class="mainscreen-home__img-container">
+					<div class="mainscreen-home__container">
+						<div class="mainscreen-home__content">
+							<h1 data-prlx class="title-main title-main_s75 mainscreen-home__title">ТЕХНОЛОГИИ</h1>
+							<h2 class="mainscreen-home__subtitle">Нейронного прогнозирования</h2>
+							<p class="mainscreen-home__text">
+								<span></span>
+								автоматический робот для торговли на криптовалютном рынке
+							</p>
+							<div class="buttons-mainscreen mainscreen-home__btns">
+								<div class="btn-wrap">
+									<button class="btn subscribe-btn mainscreen-home__btn buttons-mainscreen__btn" type="button">
+										Присоедениться
+									</button>
+								</div>
+								<button class="buttons-mainscreen__btn buttons-mainscreen__btn_no-bg" type="button">Подробнее</button>
 							</div>
-							<button class="buttons-mainscreen__btn buttons-mainscreen__btn_no-bg" type="button">Подробнее</button>
 						</div>
-
+					</div>
+					<div class="mainscreen-home__img" data-prlx data-direction="0.6">
+						<picture><source srcset="img/mainscreens/1.webp" type="image/webp"><img src="img/mainscreens/1.png" alt="Robot"></picture>
 					</div>
 				</div>
-				<div class="mainscreen-home__img" data-prlx-dyr data-prlx-mouse data-prlx-cx="150" data-prlx-cy="150">
-					<picture><source srcset="img/mainscreens/1.webp" type="image/webp"><img data-prlx src="img/mainscreens/1.png" alt="Robot"></picture>
-				</div>
 			</section>
-			<section class="who">
+			<section id="about" class="who">
 				<div class="who__container">
 					<div class="who__card card-who">
 						<div class="card-who__slider swiper">
@@ -601,7 +603,7 @@
 					</div>
 				</div>
 			</section>
-			<section data-prlx-parent class="entry">
+			<section data-prlx-parent id="entry" class="entry">
 				<div class="entry__container">
 					<div class="entry__img">
 						<picture><source srcset="img/entry/jar.webp" type="image/webp"><img data-prlx src="img/entry/jar.png" alt="Баночка"></picture>
@@ -665,7 +667,7 @@
 		</div>
 	</div>
 </div> -->
-	<script src="js/app.min.js?_v=20221122224603"></script>
+	<script src="js/app.min.js?_v=20221130172010"></script>
 </body>
 
 </html>
