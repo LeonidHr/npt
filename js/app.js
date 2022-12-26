@@ -24326,7 +24326,7 @@
         }
         changeMenuItems();
         function changeMenuItems() {
-            const menuItems = document.querySelectorAll(".menu__link"), isMain = document.querySelector("body").dataset.main;
+            const menuItems = document.querySelectorAll(".menu__link"), isMain = document.querySelector("[data-main]");
             if (isMain) menuItems.forEach((item => {
                 if (item.dataset.go) addDataForMenuItem(item);
             })); else menuItems.forEach((item => {
